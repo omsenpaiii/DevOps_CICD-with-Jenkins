@@ -121,7 +121,7 @@ pipeline {
 
                     } else {
                         echo 'Repo does not exists - Cloning the repo'
-                        sh 'git clone -b feature https://github.com/praveensirvi1212/DevOps_MasterPiece-CD-with-argocd.git'
+                        sh 'git clone -b feature https://github.com/omsenpaiii/DevOps_CICD-with-Jenkins.git'
                     }
                 }
             }
@@ -140,7 +140,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'GITHUB_TOKEN', variable: 'GITHUB_TOKEN')]) {
                     dir("DevOps_MasterPiece-CD-with-argocd/yamls") {
-                        sh "git config --global user.email 'praveen@gmail.com'"
+                        sh "git config --global user.email 'omtomar4882.be22@chitkara.edu.in'"
                         sh 'git remote set-url origin https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME}'
                         sh 'git checkout feature'
                         sh 'git add deployment.yaml'
