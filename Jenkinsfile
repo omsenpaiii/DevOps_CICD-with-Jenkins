@@ -5,9 +5,9 @@ pipeline {
         NAME = "spring-app"
         VERSION = "${env.BUILD_ID}"
         GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-        IMAGE_REPO = "praveensirvi"
-        GIT_REPO_NAME = "DevOps_MasterPiece-CD-with-argocd"
-        GIT_USER_NAME = "praveensirvi1212"
+        IMAGE_REPO = "omtomar"
+        GIT_REPO_NAME = "DevOps_CICD-with-Jenkins"
+        GIT_USER_NAME = "omsenpaiii"
        
     }
 
